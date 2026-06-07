@@ -1,0 +1,79 @@
+type: ItemTurret
+name: "Trio"
+description: "Better than Duo"
+size: 2
+health: 900
+category: turret
+requirements: [
+  titanium/90
+  silicon/60
+  copper/100
+]
+// Tiro
+range: 160
+reload: 80
+racoil: 5
+inaccuracy: 4
+shootCone: 7
+rotateSpeed: 8
+hasLiquids: true
+coolantMultiplier: 1.5
+consumes: {
+  coolant: {
+    amount: 0.2
+  }
+}
+shoot: {
+  type: ShootSpread
+  shots: 3
+  shotDelay: 0
+  spread: 30
+}
+shootSound: shoot
+ammoTypes: {
+  plastic: {
+    type: BasicBulletType
+    speed: 4
+    lifetime: 40
+    damage: 42
+    width: 15
+    height: 18
+    backColor: 0072ff
+    frontColor: cce3ff
+    ammoMultiplier: 2
+    reloadMultiplier: 1.1
+    shootEffect: shootBig
+    smokeEffect: shootBigSmoke
+    hitEffect: hitBulletBig
+    pierce: true
+    pierceCap: 2
+    fragBullets: 10
+    fragBullet: {
+      type: BasicBulletType
+      speed: 4
+      lifetime: 20
+      damage: 8
+      width: 10
+      height: 11
+      backColor: 0072ff
+      frontColor: cce3ff
+    }
+  }	
+	copper: {
+		type: BasicBulletType
+		speed: 1.6
+		lifetime: 100
+		damage: 31
+		width: 20
+		height: 18
+		fragBullets: 6
+		fragBullet: {
+      type: BasicBulletType
+			speed: 2
+			lifetime: 16
+			damage: 6
+			width: 5
+			height: 6
+		}
+	}
+}

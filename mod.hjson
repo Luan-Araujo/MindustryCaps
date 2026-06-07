@@ -1,0 +1,8 @@
+name: "my-secondmod"
+displayName: "Teste 2"
+author: "Ccauus"
+description: "Testing"
+version: "1.0"
+minGameVersion: "155"
+dependencies: [ ]
+hidden: false

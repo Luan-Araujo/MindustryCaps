@@ -1,0 +1,60 @@
+type: GenericCrafter
+name: "Sintetizador de Plástico"
+description: "Utiliza carvão como combustível para refinar grafite e crioflúido em plástico."
+size: 3
+health: 360
+category: crafting
+alwaysUnlocked: false
+buildVisibility: shown
+solid: true
+update: true
+destructible: true
+rebuildable: true
+// custo
+requirements: [
+	silicon/100
+	lead/70
+	graphite/50
+]
+hasItems: true
+hasLiquids: true
+hasPower: true
+itemCapacity: 15
+liquidCapacity: 20.0
+// receita
+consumes: {
+	power: 1.2
+	items: [
+		coal/3
+		graphite/2
+	]
+	liquids: [
+		cryofluid/0.08
+	]
+}
+craftTime: 90
+outputItem: plastic/2
+craftEffect: pulverize
+updateEffect: smoke
+updateEffectChance: 0.05
+ambientSound: machine
+ambientSoundVolume: 0.05
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawLiquidRegion
+      suffix: -tanque
+      drawLiquid: cryofluid
+      color: 92b9ff
+    }
+    {
+      type: DrawGlowRegion
+      suffix: -heat
+      color: ffffff
+    }
+  ]
+}

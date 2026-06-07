@@ -1,0 +1,10 @@
+type: item
+name: "Plástico"
+description: "Recurso sintético utilizado como munição barata, corpo de construções e no aprimoramento de unidades."
+explosiveness: 0.0
+flammability: 0.3
+radioactivity: 0.0
+charge: 0.0
+// Interface
+color: "d8f5ff"
+cost: 1.0

@@ -1,0 +1,10 @@
+type: Wall
+name: "Black Pink"
+description: "Black Pink in your area"
+health: 1000
+size: 1
+requirements: [
+	copper/200
+	lead/100
+]
+category: defense
