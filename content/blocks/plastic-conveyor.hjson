@@ -1,12 +1,22 @@
 type: Conveyor
 name: "Esteira de Plástico"
-description: "Transporta items mais rápido que a esteira de titânio"
+description: "Transporta items mais rápido que a esteira de titânio e atravessa líquidos."
+size: 1
 health: 50
 category: distribution
-speed: 0.2
+speed: 0.16
+unloadable: true
+underBullets: true
+displayedSpeed: 22
+placeableLiquid: true
 itemCapacity: 1
+armored: false
+buildCostMultiplier: 1.0
+hasColor: true
+color: ffffff
 requirements: [
     plastic/2
     graphite/1
     lead/1
 ]
+rotate: true
