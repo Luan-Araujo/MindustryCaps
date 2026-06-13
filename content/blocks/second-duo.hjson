@@ -3,6 +3,7 @@ name: "Trio"
 description: "Better than Duo"
 size: 2
 health: 900
+maxAmmo: 4
 category: turret
 requirements: [
   titanium/90
@@ -11,13 +12,16 @@ requirements: [
 ]
 // Tiro
 range: 160
-reload: 80
-racoil: 5
-inaccuracy: 4
+reload: 120
+recoil: 5
+recoilTime: 60
+inaccuracy: 10
 shootCone: 7
-rotateSpeed: 8
+rotateSpeed: 20
 hasLiquids: true
 coolantMultiplier: 1.5
+ammoUseEffect: casing2
+shootSound: shootBig
 consumes: {
   coolant: {
     amount: 0.2
@@ -26,7 +30,7 @@ consumes: {
 shoot: {
   type: ShootSpread
   shots: 3
-  shotDelay: 0
+  firstShotDelay: 45
   spread: 30
 }
 shootSound: shoot
@@ -38,22 +42,36 @@ ammoTypes: {
     damage: 42
     width: 15
     height: 18
-    backColor: 0072ff
-    frontColor: cce3ff
+    backColor: 167efde1
+    frontColor: 57a3ff
     ammoMultiplier: 2
     reloadMultiplier: 1.1
     shootEffect: shootBig
-    smokeEffect: shootBigSmoke
+    smokeEffect: {
+      type: WaveEffect
+      colorFrom: 61a8ff
+      colorTo: 5e5d5f
+      sizeFrom: 0
+      sizeTo: 20
+      lifetime: 30
+    }
     hitEffect: hitBulletBig
     pierce: true
     pierceCap: 2
     fragBullets: 10
+    trailColor: cce3ff
+    trailWidth: 4
+    trailLength: 10
+    shoot: {
+      shake: 3
+    }
     fragBullet: {
       type: BasicBulletType
       speed: 4
       lifetime: 20
       damage: 8
       width: 10
+      hitEffect: flakExplosion
       height: 11
       backColor: 0072ff
       frontColor: cce3ff
